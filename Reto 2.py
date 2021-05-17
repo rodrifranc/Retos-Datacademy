@@ -25,10 +25,8 @@ def modo_simple():
     clear
     if maquina==1 and usuario==3 or maquina==3 and usuario==2 or maquina==2 and usuario==1:
         print(f"Lo siento perdiste esta ronda :C\nLa maquina eligio {aux}")
-        return False
     elif maquina==3 and usuario==1 or maquina==2 and usuario==3 or maquina==1 and usuario==2:
         print(f"Ganaste esta ronda!! :D\nLa maquina eligio {aux}")
-        return True
     else:
         print(f"Es un empate!!\nLa maquina tambien eligio {aux}")
 
@@ -36,31 +34,67 @@ def modo_simple():
 def modo_dostres():
     c1=0
     c2=0
-    modo_simple()
-    if modo_simple==False:
-        c1+=1
+    usuario=int(input("Ingrese una opcion:\n1-Piedra\n2-Papel\n3-Tijera\n"))
+    maquina= randint(1,3)
+
+    if maquina==1:
+        aux="Piedra"
+    elif maquina==2:
+        aux="Papel"
     else:
-        c2+=1
-    print(c1)
-    print(c2)
-    modo_simple()
-    if modo_simple==False:
+        aux="Tijera"
+    clear
+    if maquina==1 and usuario==3 or maquina==3 and usuario==2 or maquina==2 and usuario==1:
+        print(f"Lo siento perdiste esta ronda :C\nLa maquina eligio {aux}")
         c1+=1
-    else:
+    elif maquina==3 and usuario==1 or maquina==2 and usuario==3 or maquina==1 and usuario==2:
+        print(f"Ganaste esta ronda!! :D\nLa maquina eligio {aux}")
         c2+=1
-    print(c1)
-    print(c2)
-    modo_simple()
-    if modo_simple==False:
+    else:
+        print(f"Ronda empatada!!\nLa maquina tambien eligio {aux}")
+    
+    usuario=int(input("\nIngrese una opcion para la segunda ronda:\n1-Piedra\n2-Papel\n3-Tijera\n"))
+    maquina= randint(1,3)
+    
+    if maquina==1:
+        aux="Piedra"
+    elif maquina==2:
+        aux="Papel"
+    else:
+        aux="Tijera"
+
+    if maquina==1 and usuario==3 or maquina==3 and usuario==2 or maquina==2 and usuario==1:
+        print(f"Lo siento perdiste esta ronda :C\nLa maquina eligio {aux}")
         c1+=1
-    else:
+    elif maquina==3 and usuario==1 or maquina==2 and usuario==3 or maquina==1 and usuario==2:
+        print(f"Ganaste esta ronda!! :D\nLa maquina eligio {aux}")
         c2+=1
-    print(c1)
-    print(c2)
+    else:
+        print(f"Ronda empatada!!\nLa maquina tambien eligio {aux}")
+
+    usuario=int(input("\nIngrese una opcion para la tercera ronda:\n1-Piedra\n2-Papel\n3-Tijera\n"))
+    maquina= randint(1,3)
+    
+    if maquina==1:
+        aux="Piedra"
+    elif maquina==2:
+        aux="Papel"
+    else:
+        aux="Tijera"
+
+    if maquina==1 and usuario==3 or maquina==3 and usuario==2 or maquina==2 and usuario==1:
+        print(f"Lo siento perdiste esta ronda :C\nLa maquina eligio {aux}")
+        c1+=1
+    elif maquina==3 and usuario==1 or maquina==2 and usuario==3 or maquina==1 and usuario==2:
+        print(f"Ganaste esta ronda!! :D\nLa maquina eligio {aux}")
+        c2+=1
+    else:
+        print(f"Ronda empatada!!\nLa maquina tambien eligio {aux}")
+    clear
     if c1>c2:
-        print(f"\nLo siento, la maquina gano {c1} de 3")
+        print(f"\nLo siento, la maquina gano {c1} de 3:c")
     elif c2>c1:
-        print(f"\nMuy bien, ganaste {c2} de 3")
+        print(f"Bien, ganaste {c2} de 3!!")
     else:
         print("\nEs un empate!!")
 
