@@ -6,7 +6,7 @@ def run():
     radio_base=float(input("Por favor ingresa el radio de la base del cilindro: "))
     altura=float(input("Por favor ingresa la altura del cilindro: "))
     volumen_cilindro=(pi*(radio_base**2)*altura)
-    return volumen_cilindro
+    print(f"El volumen del cilidro es {volumen_cilindro}")
         
 
 if __name__=="__main__":
