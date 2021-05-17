@@ -2,7 +2,7 @@
 import os
 
 print("Bienvenido al juego de comparacion de numeros, en este juego ingresaras dos numeros y luego un tercer numero el cual debera estar en el rango de los dos primeros")
-clear=os.system("cls")
+
 def run():
     n1=int(input("Por favor ingresa el primer numero: "))
     n2=int(input("Por favor ingresa el segundo numero: "))
@@ -10,8 +10,9 @@ def run():
         print("Los numeros no deben ser iguales o consecutivos")
         n1=int(input("Por favor ingresa el primer numero: "))
         n2=int(input("Por favor ingresa el segundo numero: "))
+        
+    clear=os.system("cls")
     
-    clear
     n3=int(input("Ingresa el numero de comparacion: "))
 
     if n1>n2:
