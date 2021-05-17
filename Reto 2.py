@@ -24,11 +24,11 @@ def modo_simple():
         aux="Tijera"
     clear
     if maquina==1 and usuario==3 or maquina==3 and usuario==2 or maquina==2 and usuario==1:
-        print(f"Lo siento perdiste :C\nLa maquina eligio {aux}")
-        return 0
+        print(f"Lo siento perdiste esta ronda :C\nLa maquina eligio {aux}")
+        return False
     elif maquina==3 and usuario==1 or maquina==2 and usuario==3 or maquina==1 and usuario==2:
-        print(f"Ganaste!! :D\nLa maquina eligio {aux}")
-        return 1
+        print(f"Ganaste esta ronda!! :D\nLa maquina eligio {aux}")
+        return True
     else:
         print(f"Es un empate!!\nLa maquina tambien eligio {aux}")
 
@@ -37,33 +37,32 @@ def modo_dostres():
     c1=0
     c2=0
     modo_simple()
-    if modo_simple==0:
-        print("La maquina gano esta ronda, suerte la proxima")
+    if modo_simple==False:
         c1+=1
     else:
-        print("Ganaste esta ronda, sigue asi :D")
         c2+=1
+    print(c1)
+    print(c2)
     modo_simple()
-    if modo_simple==0:
-        print("La maquina gano esta ronda, suerte la proxima")
+    if modo_simple==False:
         c1+=1
     else:
-        print("Ganaste esta ronda, sigue asi :D")
         c2+=1
+    print(c1)
+    print(c2)
     modo_simple()
-    if modo_simple==0:
-        print("La maquina gano esta ronda, suerte la proxima")
+    if modo_simple==False:
         c1+=1
     else:
-        print("Ganaste esta ronda, sigue asi :D")
         c2+=1
-
+    print(c1)
+    print(c2)
     if c1>c2:
-        print(f"Lo siento, la maquina gano {c1} de 3")
+        print(f"\nLo siento, la maquina gano {c1} de 3")
     elif c2>c1:
-        print(f"Muy bien, ganaste {c2} de 3")
+        print(f"\nMuy bien, ganaste {c2} de 3")
     else:
-        print("Es un empate!!")
+        print("\nEs un empate!!")
 
 if modo_juego==1:
     modo_simple()
