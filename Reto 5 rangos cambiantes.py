@@ -21,14 +21,15 @@ def run():
         upper=n2
         lower=n1
 
-    if n3>upper:
-        print("El numero debe ser menor")
-        n3=int(input("Ingresa el numero de comparacion: "))
-    elif n3<lower:
-        print("El numero debe ser mayor")
-        n3=int(input("Ingresa el numero de comparacion: "))
-    else:
-        print(f"Ya estas en el rango de {n1} y {n2}")
+    while n3>upper or n3<lower:
+        if n3>upper:
+            print("El numero debe ser menor")
+            n3=int(input("Ingresa el numero de comparacion: "))
+        elif n3<lower:
+            print("El numero debe ser mayor")
+            n3=int(input("Ingresa el numero de comparacion: "))
+
+    print(f"Perfecto!, ese numero esta en el rango {lower} a {upper}")
         
 
 
